@@ -1,0 +1,168 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block headerScripts %}
+
+<style type="text/css">
+.tg  {
+    border-collapse:collapse;
+    border-spacing:0;}
+
+.tg td{
+    font-weight:bold;
+    padding:5px 5px;
+    border-style:solid;
+    border-width:0px;
+    overflow:hidden;
+    word-break:normal;}
+
+.tg th{
+
+    font-weight:normal;
+    padding:5px 5px;
+    border-style:solid;
+    border-width:0px;
+    overflow:hidden;
+    word-break:normal;}
+
+.tg .tg-yw4l{vertical-align:top}
+
+.status {
+    padding: 5px 5px 5px 5px;
+    margin: 0;
+}
+
+.date {
+    font-size: 70%;
+    padding: 0px 5px 5px 5px;
+    margin: 0;
+}
+
+.statusDiv {
+    border: 1px solid red;
+    border-radius: 5px;
+    margin: 5px;
+}
+
+.pLink {
+    padding: 0px 5px 5px 5px;
+    margin: 0;
+    font-size: 90%;
+}
+
+.tg {
+    padding: 2px;
+    margin-top: 5px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.divTG {
+    padding: 5px;
+    text-align: center;
+    margin-top: 5px;
+
+}
+</style>
+
+{% endblock %}
+
+{% block content %}
+<!-- Profile Section -->
+<div style="padding:10px">
+    <img style='width:100px; margin-bottom:5px;padding:5px; height:100px' src="http://jewishworldreview.com/images/mona-lisa.jpg">
+    <br>
+    <span style="font-size: 20px"> <b>Currently Undergoing Chemotherapy </b><span style='font-size: 12px;color:#3366BB; text-decoration:underline!important;'>(Update)</span></span>
+</div>
+<!-- Status Stuff -->
+<div class="span10">
+<div style = 'vertical-align: middle'>
+            <form action="post_url/" method="post">
+                {% csrf_token %}
+                {{ form }}
+
+                <!-- <input style='width:80%' type="text" id="mystatus" placeholder="What do you want to share with your network?" /> -->
+                <input type="submit" value="Post" />
+                <!-- <button style="padding-bottom:1px">Post</button> -->
+                </form>
+</div>
+
+        {% for stat in statuses %}
+
+        <div class="statusDiv">
+        <div class="statusText">
+            <p class="status">{{ stat.text }}</p>
+        </div>
+        <div class="statusLink">
+            <p class="pLink">
+        {% for key, value in stat.link.items %}
+            <a href="{{ value }}">{{key}}</a>
+        {% endfor %}
+        </p>
+        </div>
+        <div class="statusDate">
+            <p class="date">{{stat.time}}</p>
+        </div>
+    </div>
+
+{% endfor %}
+
+    <br>
+    <h3> Trust Levels</h3>
+    <p> Your network of family and friends are here to support you throughout your cancer journey.  Here, you can let them know which type of help you would appreciate from them.  For each type of task, select which type of family or friendship group can see your support needs. </p>
+    <div style="text-align: center margin:auto; width:100%">
+    <div class="divTG">
+    <table class="tg">
+        <tr>
+            <th class="tg-031e"></th>
+            <th class="tg-031e">Family </th>
+            <th class="tg-031e">Friends</th>
+            <th class="tg-031e">Network</th>
+        </tr>
+        {% for cat in task_category %}
+        <tr>
+            <form action="">
+                <td class="tg-7khl"> {{cat.category}} </td>
+                <td class="tg-031e">
+                    <center>
+                        <input type="radio" value="t1family" name="t1">
+                    </center>
+                </td>
+                <td class="tg-031e">
+                    <center>
+                        <input type="radio" value="t1friends" name="t1">
+                    </center>
+                </td>
+                <td class="tg-031e">
+                    <center>
+                        <input type="radio" value="t1network" name="t1">
+                    </center>
+                </td>
+            </form>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <button style="margin: 5px; padding-bottom:1px" href="javascript:;">Save trust preferences</button></div>
+    </div>
+</div>
+{% endblock %}
+<!-- <script>
+function submit(){
+  var currentStatus = document.getElementById('mystatus');
+
+  document.getElementById('displayStatus').innerHTML =
+                    document.getElementById("mystatus").value;
+
+  //alert(mystatus.value);
+  console.log(mystatus.value);
+
+}
+
+function saveprefs(){
+
+
+
+}
+
+</script>
+ -->

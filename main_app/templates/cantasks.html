@@ -1,0 +1,185 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block headerScripts %}
+
+<style type="text/css">
+.tg  {
+    border-collapse:collapse;
+    border-spacing:0;}
+
+.tg td{
+    font-weight:bold;
+    padding:5px 5px;
+    border-style:solid;
+    border-width:0px;
+    overflow:hidden;
+    word-break:normal;}
+
+.tg th{
+
+    font-weight:normal;
+    padding:5px 5px;
+    border-style:solid;
+    border-width:0px;
+    overflow:hidden;
+    word-break:normal;}
+
+.tg .tg-yw4l{vertical-align:top}
+
+.status {
+    padding: 5px 5px 5px 5px;
+    margin: 0;
+}
+
+.date {
+    font-size: 70%;
+    padding: 0px 5px 5px 5px;
+    margin: 0;
+}
+
+.statusDiv {
+    border: 1px solid red;
+    border-radius: 5px;
+    margin: 5px;
+}
+
+.pLink {
+    padding: 0px 5px 5px 5px;
+    margin: 0;
+    font-size: 90%;
+}
+
+.tg {
+    padding: 2px;
+    margin-top: 5px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.divTG {
+    padding: 5px;
+    text-align: center;
+    margin-top: 5px;
+
+}
+
+.something {
+    color: white;
+    text-align: center;
+}
+
+.clicked {
+    background-color: green;
+    color: white;
+    text-align: center;
+}
+</style>
+
+ <script src="https://d3js.org/d3.v4.min.js"></script>
+<script>
+var userInitials = "";
+
+function addInitials(){
+  var userInitials= document.getElementById('initials').value;
+                console.log(userInitials);
+
+}
+
+
+
+</script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script>
+$( document ).ready(function() {
+   $('.something').click(function(){
+  $(this).toggleClass('clicked');
+
+});
+});
+</script>
+
+
+
+
+
+
+
+{% endblock %}
+
+{% block content %}
+<!-- View as buttons to toggle between the different networks -->
+
+<!-- Profile Section -->
+<div style="padding:10px">
+    <img style='width:100px; margin-bottom:5px;padding:5px; height:100px' src="http://jewishworldreview.com/images/mona-lisa.jpg">
+</div>
+
+
+<!-- Table per main category -->
+Add your initials to start selecting tasks <br><input type="text" id="initials"/>
+             <button onclick="addInitials()" style="padding-bottom: 1px" >Add initials</button>
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+.tg2  {-moz-border-radius: 15px;
+        border-radius: 15px;
+        border: 1px solid #D3D3D3 ;}
+.tg2 td{border: dotted #D3D3D3 ;font-family:Arial, sans-serif;font-size:14px; border-width:1px;overflow:hidden;word-break:normal;}
+.tg2 th{border: solid #D3D3D3 ;font-family:Arial, sans-serif;font-size:14px; text-align:center ;font-weight:normal;padding:5px 0px;border-width:1px;overflow:hidden;word-break:normal;}
+
+.tg2 .tg-hgcj{font-weight:bold;text-align:center}
+.tg2 .tg-031e{vertical-align:top; text-align:center}
+.tg2 .tg-amwm{vertical-align:top; text-align:center}
+</style>
+
+{% for category in cats  %}
+
+
+<table class="tg2" style=" margin:15px;border:red; table-layout: fixed; width: 100%">
+<colgroup>
+<col style="width: 200px">
+<col style="width: 50px">
+<col style="width: 50px">
+<col style="width: 50px">
+<col style="width: 50px">
+<col style="width: 50px">
+<col style="width: 50px">
+<col style="width: 50px">
+</colgroup>
+  <tr>
+    <th class="tg-031e"><b>{{category.0}}</b></th>
+    <th class="tg-hgcj">Mon</th>
+    <th class="tg-hgcj">Tue</th>
+    <th class="tg-hgcj">Wed</th>
+    <th class="tg-hgcj">Thu</th>
+    <th class="tg-hgcj">Fri</th>
+    <th class="tg-hgcj">Sat</th>
+    <th class="tg-hgcj">Sun</th>
+  </tr>
+
+
+  {% for t in category.1 %}
+  <tr>
+  <td>{{t.task}}</td>
+  <td class="todotask"> <div class="something" style='width:50px;height:30px'></div></td>
+  <td class="todotask"> <div class="something" style='width:50px;height:30px'></div></td>
+  <td class="todotask"> <div class="something" style='width:50px;height:30px'></div></td>
+  <td class="todotask"> <div class="something" style='width:50px;height:30px'></div></td>
+  <td class="todotask"> <div class="something" style='width:50px;height:30px'></div></td>
+  <td class="todotask"> <div class="something" style='width:50px;height:30px'></div></td>
+  <td class="todotask"> <div class="something" style='width:50px;height:30px'></div></td>
+
+    </tr>
+{% endfor %}
+{% endfor %}
+</table>
+
+{% endblock %}

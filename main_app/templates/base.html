@@ -1,0 +1,520 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="da" class="frontpage">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta property="og:url" content="http://www.cancer.dk/international/">
+    <meta property="og:site_name" content="International">
+    <meta property="og:image" content="http://www.cancer.dk/images/logo-social.png">
+    <meta property="twitter:card" content="summary">
+    <meta property="twitter:image:url" content="http://www.cancer.dk/images/logo-social.png">
+    <meta name="description" content="">
+    <title>cantask - Danish Cancer Society</title>
+    <link href={% static "main.css" %} media="screen" rel="stylesheet" type="text/css">
+    <link href={% static "main.css" %} media="print" rel="stylesheet" type="text/css">
+    <link href="http://www.cancer.dk/international/" rel="canonical">
+    <meta name="cludosearch" content="Hjælp og viden">
+    <style type="text/css" media="screen">
+    <style type="text/css" media="screen">
+    </style>
+    <style type="text/css">
+    .tg {
+        border-collapse: collapse;
+        border-spacing: 0;
+    }
+
+    .tg td {
+        font-family: Arial, sans-serif;
+        font-size: 14px;
+        padding: 10px 5px;
+        border-style: solid;
+        border-width: 1px;
+        overflow: hidden;
+        word-break: normal;
+    }
+
+    .tg th {
+        font-family: Arial, sans-serif;
+        font-size: 14px;
+        font-weight: normal;
+        padding: 10px 5px;
+        border-style: solid;
+        border-width: 1px;
+        overflow: hidden;
+        word-break: normal;
+    }
+
+    .tg .tg-9hbo {
+        font-weight: bold;
+        vertical-align: top
+    }
+
+    .tg .tg-yw4l {
+        vertical-align: top
+    }
+    </style>
+    <style>
+    /*.content-container a,*/
+
+    .content-container a:link,
+    .content-container a:active,
+    .content-container a:visited,
+    /*.super-footer p a,*/
+
+    .super-footer p a:link,
+    .super-footer p a:active,
+    .super-footer p a:visited {
+        color: #cc0000;
+    }
+
+    .content-container a:hover,
+    .super-footer p a:hover,
+    ul.sitemap-list li.expandable.expanded>a,
+    ul.sitemap-list li a:hover {
+        color: #8f0000;
+    }
+
+    .content-container a.active {
+        color: #333333;
+    }
+
+    .content-container .receipt .btn-facebook,
+    .sign-up-box .link-buttons a {
+        color: #fff;
+    }
+    /*.left-menu ul li > a,*/
+
+    .left-menu ul li > a:link,
+    .left-menu ul li > a:active,
+    .left-menu ul li > a:visited,
+    /*.left-menu h2 > a,*/
+
+    .left-menu h2 > a:link,
+    .left-menu h2 > a:active,
+    .left-menu h2 > a:visited {
+        color: #424242;
+    }
+    /*.local-association .left-menu h2 > a,*/
+
+    .local-association .left-menu h2 > a:link,
+    .local-association .left-menu h2 > a:active,
+    .local-association .left-menu h2 > a:visited {
+        color: #fff;
+    }
+
+    .left-menu h2 > a:hover,
+    .content-container > a:hover,
+    .left-menu ul li > a:hover,
+    .left-menu ul li.active > a:link,
+    .left-menu ul li.active > a:active,
+    .left-menu ul li.active > a:hover,
+    .left-menu ul li.active > a:visited,
+    .header-container .small-menu ul li.active a:link,
+    .header-container .small-menu ul li.active a:active,
+    .header-container .small-menu ul li.active a:hover,
+    .header-container .small-menu ul li.active a:visited,
+    .header-container .small-menu ul li > a:hover,
+    .breadcrumb ul li a:link,
+    .breadcrumb ul li a:active,
+    .breadcrumb ul li a:hover,
+    .breadcrumb ul li a:visited,
+    .megamenu-wrapper.active a.megamenu-activator,
+    .megamenu-wrapper .megamenu .menu .more .more-link,
+    .product-information p.price-before,
+    form.form-builder .webservice-helper button {
+        color: #cc0000;
+    }
+
+    form.form-builder button.btn.submit {
+        text-shadow: none;
+    }
+
+    .content-container .contentbox-colored,
+    .content-container .color-scheme-1 {
+        background-color: #e3f0f6;
+    }
+
+    .content-container .contentbox-colored.table,
+    .content-container .employeesbox.contentbox-colored {
+        background-color: #f4f4f4;
+    }
+
+    .kb-share .socialmedia-share .handle,
+    .kb-share .socialmedia-share ul,
+    .kb-share .socialmedia-share .clipper .bg {
+        background: none repeat scroll 0 0 #cc0000;
+    }
+
+    .content-container .color-scheme-4 {
+        background-color: #ffffff;
+    }
+
+    .btn,
+    .content-container .btn,
+    .content-container .btn:link,
+    .content-container .btn:active,
+    .content-container .btn:visited,
+    .form-search .btn-primary {
+        background-color: #ce2127;
+        background: -webkit-linear-gradient(top, #ce2127 0%, #90171b 100%) repeat scroll 0 0 transparent;
+        background: -moz-linear-gradient(top, #ce2127 0%, #90171b 100%) repeat scroll 0 0 transparent;
+        background: -o-linear-gradient(top, #ce2127 0%, #90171b 100%) repeat scroll 0 0 transparent;
+        background: -ms-linear-gradient(top, #ce2127 0%, #90171b 100%) repeat scroll 0 0 transparent;
+        background: linear-gradient(to bottom, #ce2127 0%, #90171b 100%) repeat scroll 0 0 transparent;
+        color: #ffffff;
+    }
+
+    .form-search .btn-primary:hover,
+    .btn:hover {
+        background: #90171b;
+    }
+
+    .ui-datepicker-header {
+        background: #90171b;
+        border: none;
+    }
+
+    .bottom-pagination a.btn.prev:link,
+    .bottom-pagination a.btn.next:link {
+        background-repeat: no-repeat, repeat;
+        background-attachment: scroll, scroll;
+        background-color: transparent, transparent;
+    }
+
+    .bottom-pagination a.btn.prev:link {
+        background-position: 10px 50%, 0 0;
+    }
+
+    .bottom-pagination a.btn.next:link {
+        background-position: -185px 50%, 0 0;
+    }
+
+    .ui-multiselect .ui-icon {
+        background-repeat: no-repeat, repeat;
+        background-attachment: scroll, scroll;
+        background-position: 47% 11px, 0 0;
+        background-color: transparent, transparent;
+    }
+
+    .product-images .thumblist div.nav a.prev,
+    .product-images .thumblist div.nav a.prev:hover {
+        background-position: 50% 2px, 0 0;
+    }
+
+    .product-images .thumblist div.nav a.next,
+    .product-images .thumblist div.nav a.next:hover {
+        background-position: 6px -384px, 0 0;
+    }
+
+    .colored-top-border {
+        border-top: 5px solid #ce2127;
+    }
+
+    #mbCenter,
+    .tip-en-ven-modal .modal-header,
+    .tip-en-ven-modal .modal-body .red-header {
+        border-top-color: #ce2127;
+    }
+
+    .content-container .btn:hover {
+        background: none repeat scroll 0 0 #90171b;
+        color: #ffffff;
+    }
+
+    .content-container .support-box {
+        background-color: #e3f0f6;
+    }
+
+    div.poll div.results div.poll-result div.percent span {
+        background: none repeat scroll 0 0 #cc0000;
+    }
+
+    div.poll div.results div.label {
+        color: #cc0000;
+    }
+
+    div.poll div.kradio.radio span {
+        background: #90171b;
+        background-image: -webkit-linear-gradient(bottom, #ce2127, #90171b);
+        background-image: -moz-linear-gradient(bottom, #ce2127, #90171b);
+        background-image: -o-linear-gradient(bottom, #ce2127, #90171b);
+        background-image: -ms-linear-gradient(bottom, #ce2127, #90171b);
+        background-image: linear-gradient(to top, #ce2127, #90171b);
+    }
+
+    .support-box ul {
+        border-top-color: #ccd8dd;
+        border-bottom: none;
+    }
+
+    .support-box ul li {
+        border-top: none;
+        border-bottom-color: #ccd8dd;
+    }
+
+    .imagebox.boxtext.wide .text.theme,
+    .redalt div.superslideshow .slide-holder ul li .text.theme {
+        background: #cc0000;
+        background: rgba(204, 0, 0, 0.85);
+    }
+
+    .redalt div.superslideshow.superslideshow__alt-size .slide-holder ul li .text {
+        background-color: transparent;
+    }
+
+    .redalt div.superslideshow.superslideshow__alt-size .slide-holder ul li .text.theme .text-inner {
+        background: #cc0000;
+        background: rgba(204, 0, 0, 0.85);
+    }
+
+    .imagebox.boxtext.wide .text.theme h2,
+    .imagebox.boxtext.wide .text.theme p,
+    .redalt div.superslideshow .slide-holder ul li .text .text-inner h2,
+    .redalt div.superslideshow .slide-holder ul li .text .text-inner p {
+        color: #fff;
+    }
+
+    div.superslideshow .coda-list a.coda.active {
+        background: #cc0000;
+    }
+
+    .breadcrumb ul li .icon-home {
+        color: #cc0000;
+    }
+
+    .social-icon {
+        background: #cc0000;
+    }
+
+    .megamenu-wrapper a.megamenu-activator:hover,
+    .megamenu-wrapper a.megamenu-activator.active {
+        color: #cc0000;
+    }
+
+    .megamenu-wrapper::before {
+        background-color: #ce2127;
+    }
+
+    #mbCenter a {
+        color: #cc0000;
+    }
+
+    #mbCloseLink {
+        background: #ce2127;
+        height: 25px;
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        width: 25px;
+        z-index: 9999;
+        -moz-border-radius: 50%;
+        -webkit-border-radius: 50%;
+        border-radius: 50%;
+        text-indent: 0;
+    }
+
+    #mbCloseLink:after {
+        content: 'x';
+        display: inline-block;
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 23px;
+        text-align: center;
+        width: 25px;
+        height: 25px;
+        color: #fff;
+    }
+
+    .tip-en-ven-modal .modal-header button,
+    .tip-en-ven-modal .modal-body .circle-background {
+        background: #ce2127;
+    }
+    /*Collection*/
+
+    .collection-progress-area .progress>.bar {
+        background-image: none;
+        background-color: #ce2127;
+        background: repeating-linear-gradient(45deg, #ce2127 1px, #ce2127 4px, #cc0000 5px, #ce2127 6px) 0 0;
+        background: -moz-repeating-linear-gradient(45deg, #ce2127 1px, #ce2127 4px, #cc0000 5px, #ce2127 6px) 0 0;
+        background: -webkit-repeating-linear-gradient(45deg, #ce2127 1px, #ce2127 4px, #cc0000 5px, #ce2127 6px) 0 0;
+        background: -o-repeating-linear-gradient(45deg, #ce2127 1px, #ce2127 4px, #cc0000 5px, #ce2127 6px) 0 0;
+    }
+
+    .progress > .bar {
+        background-color: #ce2127;
+    }
+
+    .collections>.private-collections a:hover .name,
+    .collections .company-collections a:hover .name,
+    .collections .liked-collections a:hover .name,
+    .collections>.private-collections .collected,
+    .collections .company-collections .collected,
+    .collections .liked-collections .collected,
+    .collection-filter .filters a.active,
+    .collections .current-collections .collection:hover .name,
+    .collections .current-collections .collection .likes,
+    .collection-info-box .days-left,
+    .collection-donations .donation .title-line .amount,
+    .create-collection .barometer-box h4 .days-left,
+    .content-container .numberlookup-form input.numberlookup-submit {
+        color: #cc0000;
+    }
+
+    .create-collection .create-collection-progress .arrow.active .start {
+        border-color: #ce2127;
+        border-left-color: transparent;
+    }
+
+    .create-collection .create-collection-progress .arrow.active .end {
+        border-left-color: #ce2127;
+    }
+
+    .create-collection .create-collection-progress .arrow.active .text {
+        background: #ce2127;
+        color: #fff;
+    }
+    </style>
+
+    {% block headerScripts %}
+
+    {% endblock %}
+
+
+</head>
+
+<body id="frontpage-frontpage-index-index-139">
+    <div class="accessibility-links">
+        <ul title="Spring til links">
+            <li><a href="#nav-area" id="accessibility-nav">
+            Spring til Navigation </a></li>
+            <li><a href="#content-area" accesskey="2">
+            Spring til indhold </a></li>
+            <li><a href="#search-field" accesskey="0">
+            Spring til Søgning </a></li>
+            <li><a href="/sitemap/">
+            Gå til Sitemap </a></li>
+            <li><a href="/" accesskey="1">
+            Gå til Forsiden </a></li>
+            <li><a href="#info-area" accesskey="9">
+            Spring til Bund </a></li>
+        </ul>
+    </div>
+    <div class="site-selector">
+        <div class="container">
+            <div class="row">
+                <ul>
+                    <li class="active">
+                        <a href="http://www.cancer.dk/" title="Til cancer.dk forsiden" target="_blank">
+                        cancer.dk
+                    </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="header-container">
+            <div class="row"></div>
+            <div class="row header">
+                <div class="span16">
+                    <div class="logo-container">
+                        <a href="http://www.cancer.dk/dk/international/" tabindex="-1" title="Til forsiden">
+                            <img src="http://www.cancer.dk/dyn/resources/Header/logo/6/56/1/1409144838/international-top.png" alt="Til forsiden" />
+                        </a>
+                    </div>
+                    <div class="small-menu" style="display: block;right: 0;">
+                        <ul>
+                            <li class="access-hide"><a href="#accessibility-nav" class="access-hide" id="nav-area" tabindex="0">Navigation</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <hr class="header-hr" />
+        </div>
+        <!--     <div class="row before-content">
+        <div class="header-container">
+            <div class="span12 breadcrumb">
+            </div>
+            <div class="span4 share-bar">
+            </div>
+        </div>
+    </div> -->
+        <div class="content-container" style='padding-bottom:20px; overflow: hidden;padding-right: 50px;'>
+            <div class='span4 left-column'>
+                <div class="row left-menu">
+                    <div class="span4">
+                        <h2> Alice Smith </h2>
+                        <ul>
+                            <li class=" ">
+                                <a href="/profile/" title="" target="_self">&#187; Profile (Patient View)</a>
+                            </li>
+                            <li class=" ">
+                                <a href="/userhome/" title="" target="_self">&#187; Profile (Network View)</a>
+                            </li>
+                            <li class=" ">
+                                <a href="/cantask_manager/" title="" target="_self">&#187; <span style='color:#ce2127'>cantask</span> Manager (Network)</a>
+                            </li>
+                            <li class=" ">
+                                <a href="/cantask_rels/" title="" target="_self">&#187; <span style='color:#ce2127'>cantask</span> Manager (Relatives)</a>
+                            </li>
+                            <li class=" ">
+                                <a href="/cantask_close_rels/" title="" target="_self">&#187; <span style='color:#ce2127'>cantask</span> Manager (Close Rels)</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="span8">
+                {% block content %} {% endblock %}
+            </div>
+        </div>
+        <div class="super-footer" id="info-area" tabindex="0">
+            <div class="container">
+                <div class="footer-container">
+                    <div class="row">
+                        <div class="span4">
+                            <span class="super-footer-header">Danish Cancer Society</span>
+                            <p>Strandboulevarden 49
+                                <br/>DK-2100 København Ø
+                                <br/>Denmark</p>
+                            <p>Phone: +45 35 25 75 00
+                                <br/>E-mail: <a href="mailto:info@cancer.dk">info@cancer.dk</a></p>
+                        </div>
+                        <div class="span4">
+                            <span class="super-footer-header"></span>
+                        </div>
+                        <div class="span4">
+                            <span class="super-footer-header"></span>
+                        </div>
+                        <div class="span4">
+                            <span class="super-footer-header"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="sub-footer">
+                <div class="container">
+                    <div class="footer-container">
+                        <div class="row">
+                            <div class="span5">
+                            </div>
+                            <div class="span5">
+                            </div>
+                            <div class="span6">
+                                <p> The Wild Types </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+{% block footer_scripts %}
+{% endblock %}
+</body>
+
+</html>
